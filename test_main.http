@@ -1,6 +1,4 @@
-# Test your FastAPI endpoints
-
-POST http://localhost:8080/api/v1/bills/
+POST http://localhost:8080/api/v1/bills/import
 Accept: application/json
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
@@ -12,7 +10,17 @@ Content-Disposition: form-data; name="file"; filename="bills.csv"
 
 ###
 
-GET http://127.0.0.1:8000/hello/User
+POST http://localhost:8080/api/v1/bills/export
 Accept: application/json
+Content-Type: application/json
+
+{
+  "client_org": "OOO Client1Org5"
+}
 
 ###
+
+{
+  "client_name": "client2",
+  "client_org": "OOO Client2Org1"
+}
